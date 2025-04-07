@@ -5,25 +5,32 @@
   <title>Supportformulär</title>
 </head>
 <body>
+  <!-- Huvudrubrik och beskrivande text -->
   <h1>Supportformulär</h1>
   <p>Här kan du skicka ett ärende till vår supportavdelning.</p>
 
+  <!-- Formuläret som skickar data till parse_form.php -->
   <form action="https://swplayground.ltu.se/resources/parse_form.php" method="POST">
 
+    <!-- Namnfält -->
     <label for="namn">Ditt namn:</label><br>
     <input type="text" id="namn" name="namn" required><br><br>
 
+    <!-- Telefonfält -->
     <label for="telefon">Telefon:</label><br>
     <input type="text" id="telefon" name="telefon" required><br><br>
 
+    <!-- Prioriteringsdropdown - måste väljas -->
     <label for="prioritet">Prioritet:</label><br>
     <select id="prioritet" name="prioritet" required>
+      <!-- Placeholder som inte kan väljas men visar instruktion -->
       <option value="" disabled selected>Välj prioritet...</option>
       <option value="1">Låg</option>
       <option value="2">Normal</option>
       <option value="3">Hög</option>
     </select><br><br>
 
+    <!-- Radioknappar för att välja ort - måste väljas -->
     <label>Tilldela till ort:</label><br>
     <input type="radio" id="gbg" name="ort" value="gbg" required>
     <label for="gbg">Göteborg</label><br>
@@ -37,8 +44,10 @@
     <input type="radio" id="lule" name="ort" value="lule">
     <label for="lule">Luleå</label><br><br>
 
+    <!-- Kategoridropdown - måste väljas -->
     <label for="kategori">Kategori</label><br>
     <select id="kategori" name="kategori" required>
+      <!-- Placeholder som inte kan väljas men visar instruktion -->
       <option value="" disabled selected>Välj kategori...</option>
       <option value="fakt">Fakturering</option>
       <option value="net">Internet</option>
@@ -46,12 +55,15 @@
       <option value="epost">E-post</option>
     </select><br><br>
 
+    <!-- Rubrikfält -->
     <label for="rubrik">Rubrik</label><br>
     <input type="text" id="rubrik" name="rubrik" required><br><br>
 
+    <!-- Beskrivningsfält med större textarea -->
     <label for="beskrivning">Beskrivning</label><br>
     <textarea id="beskrivning" name="beskrivning" rows="6" cols="50" required></textarea><br><br>
 
+    <!-- Knappar för att skicka eller återställa formuläret -->
     <input type="submit" name="skicka" value="Submit">
     <input type="reset" value="Reset">
   </form>

@@ -1,0 +1,55 @@
+/* Grundstilar för rubriker - Arial/Helvetica */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+  }
+  
+  /* Grundstilar för all annan text - Candara/Verdana */
+  body {
+    font-family: 'Candara', 'Verdana', sans-serif;
+  }
+  
+  /* Bakgrundsfärg för Tabell1 */
+  .tabell1 {
+    background-color: #ffcccc;
+    border: 1px solid #000000;
+  }
+  
+  /* Bakgrundsfärg för Tabell2 */
+  .tabell2 {
+    background-color: #ffcc99;
+    border: 1px solid #000000;
+  }
+  
+  /* Stilar för tabelltitlar (captions) */
+  .tabell1 caption,
+  .tabell2 caption {
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 5px;
+  }
+  
+  /* underlinje för rubriker i tabell 2 */
+  .tabell2 thead th {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+    text-align: left;
+  }
+  
+  /* Stil för tabellfoten med svart bakgrund och vit text */
+  .tabell2 tfoot .foot {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 8px;
+  }
+  
+  /* Grön färg för källtexten */
+  #source {
+    color: #009900;
+    text-align: right;
+  }
+  
+  /* Hover-effekt för länkar */
+  a:hover {
+    color: #ffffff;
+    background-color: #000000;
+  }

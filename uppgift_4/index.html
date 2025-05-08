@@ -1,52 +1,67 @@
 <!DOCTYPE html>
+<!--
+  Startsida för Grön Garderob
+
+  Detta är huvudsidan för webbplatsen som visar en välkomstbanner
+  och navigeringskort till de viktigaste undersidorna.
+-->
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grön Garderob - Din modebutik</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"> <!-- Teckenkodning för att hantera svenska tecken -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsiv design för mobila enheter -->
+  <title>Grön Garderob - Din modebutik</title> <!-- Sidtitel som visas i webbläsarfliken -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Länk till CSS-stilmallen -->
 </head>
 <body>
+  <!-- Sidhuvud med logotyp, navigation och välkomstbanner -->
   <header>
-    <h1>Grön Garderob - <em>Din modebutik</em></h1>
+    <h1>Grön Garderob - <em>Din modebutik</em></h1> <!-- Huvudrubrik med företagsnamn -->
+    <!-- Navigationsmeny -->
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Hem</a></li>
-        <!-- <li><a href="produkter.html">Produkter</a></li> -->
-        <li><a href="erbjudanden.html">Erbjudanden</a></li>
+        <li><a href="index.html" class="active">Hem</a></li> <!-- Aktiv länk till startsidan -->
+        <!-- <li><a href="produkter.html">Produkter</a></li> --> <!-- Kommenterad länk till produktsidan -->
+        <li><a href="erbjudanden.html">Erbjudanden</a></li> <!-- Länk till erbjudandesidan -->
         <!-- <li><a href="blogg.html">Blogg</a></li>
-        <li><a href="om-foretaget.html">Om oss</a></li> -->
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="om-foretaget.html">Om oss</a></li> --> <!-- Kommenterade länkar till blogg och om oss -->
+        <li><a href="kontakt.html">Kontakt</a></li> <!-- Länk till kontaktsidan -->
       </ul>
     </nav>
+    <!-- Välkomstbanner -->
     <div class="welcome">WELCOME</div>
   </header>
 
+  <!-- Huvudinnehåll med navigeringskort -->
   <main>
+    <!-- Rutnät med navigeringskort till viktiga undersidor -->
     <div class="main-grid">
+      <!-- Kort för produktsidan -->
       <div class="grid-item">
         <a href="produkter.html">
-          <img src="images/produkt-kollage.png" alt="Produkter">
-          <h3>Produkter</h3>
+          <img src="images/produkt-kollage.png" alt="Produkter"> <!-- Bild som representerar produktsidan -->
+          <h3>Produkter</h3> <!-- Rubrik för navigeringskortet -->
         </a>
       </div>
+      <!-- Kort för bloggsidan -->
       <div class="grid-item">
         <a href="blogg.html">
-          <img src="images/modell.png" alt="Blogg">
-          <h3>Blogg</h3>
+          <img src="images/modell.png" alt="Blogg"> <!-- Bild som representerar bloggsidan -->
+          <h3>Blogg</h3> <!-- Rubrik för navigeringskortet -->
         </a>
       </div>
+      <!-- Kort för om företaget-sidan -->
       <div class="grid-item">
         <a href="om-foretaget.html">
-          <img src="images/sytema.png" alt="Om företaget">
-          <h3>Om företaget</h3>
+          <img src="images/sytema.png" alt="Om företaget"> <!-- Bild som representerar om företaget-sidan -->
+          <h3>Om företaget</h3> <!-- Rubrik för navigeringskortet -->
         </a>
       </div>
     </div>
   </main>
 
+  <!-- Sidfot med copyright-information -->
   <footer>
-    <p>&copy; 2025 Grön Garderob - Din modebutik</p>
+    <p>&copy; 2025 Grön Garderob - Din modebutik</p> <!-- Copyright-text -->
   </footer>
 </body>
 </html>

@@ -1,50 +1,66 @@
 <!DOCTYPE html>
+<!--
+  Kontaktsida för Grön Garderob
+
+  Denna sida innehåller ett kontaktformulär, kontaktinformation
+  och en karta för att hjälpa kunder att hitta till butiken.
+-->
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakt – Grön Garderob</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" /> <!-- Teckenkodning för att hantera svenska tecken -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsiv design för mobila enheter -->
+  <title>Kontakt – Grön Garderob</title> <!-- Sidtitel som visas i webbläsarfliken -->
+  <link rel="stylesheet" href="css/style.css" /> <!-- Länk till CSS-stilmallen -->
 </head>
 <body>
+  <!-- Sidhuvud med logotyp och navigation -->
   <header>
-    <h1>Grön Garderob</h1>
+    <h1>Grön Garderob</h1> <!-- Huvudrubrik med företagsnamn -->
+    <!-- Navigationsmeny -->
     <nav>
         <ul>
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="produkter.html">Produkter</a></li>
-          <li><a href="erbjudanden.html">Erbjudanden</a></li>
-          <li><a href="blogg.html">Blogg</a></li>
-          <li><a href="om-foretaget.html">Om oss</a></li>
-          <li><a href="kontakt.html" class="active">Kontakt</a></li>
+          <li><a href="index.html">Hem</a></li> <!-- Länk till startsidan -->
+          <li><a href="produkter.html">Produkter</a></li> <!-- Länk till produktsidan -->
+          <li><a href="erbjudanden.html">Erbjudanden</a></li> <!-- Länk till erbjudandesidan -->
+          <li><a href="blogg.html">Blogg</a></li> <!-- Länk till bloggsidan -->
+          <li><a href="om-foretaget.html">Om oss</a></li> <!-- Länk till om oss-sidan -->
+          <li><a href="kontakt.html" class="active">Kontakt</a></li> <!-- Aktiv länk till kontaktsidan -->
         </ul>
       </nav>
   </header>
 
+  <!-- Huvudinnehåll med kontaktformulär och information -->
   <main>
-    <h2>Kontakta oss</h2>
+    <h2>Kontakta oss</h2> <!-- Huvudrubrik för kontaktsektionen -->
 
+    <!-- Kontaktformulär för att skicka meddelanden till företaget -->
     <form class="kontaktform">
+      <!-- Namnfält -->
       <label for="namn">Namn:</label>
-      <input type="text" id="namn" name="namn" required />
+      <input type="text" id="namn" name="namn" required /> <!-- Obligatoriskt fält för namn -->
 
+      <!-- E-postfält -->
       <label for="epost">E-post:</label>
-      <input type="email" id="epost" name="epost" required />
+      <input type="email" id="epost" name="epost" required /> <!-- Obligatoriskt fält för e-post med validering -->
 
+      <!-- Meddelandefält -->
       <label for="meddelande">Meddelande:</label>
-      <textarea id="meddelande" name="meddelande" rows="5" required></textarea>
+      <textarea id="meddelande" name="meddelande" rows="5" required></textarea> <!-- Obligatoriskt textområde för meddelande -->
 
+      <!-- Skicka-knapp -->
       <button type="submit">Skicka</button>
     </form>
 
+    <!-- Sektion med kontaktinformation -->
     <section class="kontakt-info">
-        <p>📧 Vårt mejl: <a href="mailto:DinModeButik@gmail.com">DinModeButik@gmail.com</a></p>
-        <p>📞 Vår telefon: 05000001</p>
+        <p>📧 Vårt mejl: <a href="mailto:DinModeButik@gmail.com">DinModeButik@gmail.com</a></p> <!-- E-postadress med mailto-länk -->
+        <p>📞 Vår telefon: 05000001</p> <!-- Telefonnummer -->
       </section>
 
-      
+    <!-- Kartsektion som visar butikens läge -->
     <div class="karta">
-      <h3>Hitta till oss</h3>
+      <h3>Hitta till oss</h3> <!-- Rubrik för kartsektionen -->
+      <!-- Inbäddad Google Maps-karta -->
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2164.914106630362!2d18.0632402!3d59.3345914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d588b3f7d13%3A0xc4c83eeb4aa755d1!2sStockholm%20City!5e0!3m2!1ssv!2sse!4v1715000000000!5m2!1ssv!2sse"
         width="500"
@@ -57,8 +73,9 @@
     </div>
   </main>
 
+  <!-- Sidfot med copyright-information -->
   <footer>
-    <p>&copy; 2025 Grön Garderob – Din Modebutik</p>
+    <p>&copy; 2025 Grön Garderob – Din Modebutik</p> <!-- Copyright-text -->
   </footer>
 </body>
 </html>

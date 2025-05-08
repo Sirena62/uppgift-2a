@@ -1,54 +1,69 @@
 <!DOCTYPE html>
+<!--
+  Erbjudandesida för Grön Garderob
+
+  Denna sida visar aktuella rabatter och specialerbjudanden
+  för att locka kunder att handla produkter till reducerade priser.
+-->
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erbjudanden – Grön Garderob</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" /> <!-- Teckenkodning för att hantera svenska tecken -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsiv design för mobila enheter -->
+  <title>Erbjudanden – Grön Garderob</title> <!-- Sidtitel som visas i webbläsarfliken -->
+  <link rel="stylesheet" href="css/style.css" /> <!-- Länk till CSS-stilmallen -->
 </head>
 <body>
+  <!-- Sidhuvud med logotyp och navigation -->
   <header>
-    <h1>Grön Garderob</h1>
+    <h1>Grön Garderob</h1> <!-- Huvudrubrik med företagsnamn -->
+    <!-- Navigationsmeny -->
     <nav>
       <ul>
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="produkter.html">Produkter</a></li>
-        <li><a href="erbjudanden.html" class="active">Erbjudanden</a></li>
-        <li><a href="blogg.html">Blogg</a></li>
-        <li><a href="om-foretaget.html">Om oss</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="index.html">Hem</a></li> <!-- Länk till startsidan -->
+        <li><a href="produkter.html">Produkter</a></li> <!-- Länk till produktsidan -->
+        <li><a href="erbjudanden.html" class="active">Erbjudanden</a></li> <!-- Aktiv länk till erbjudandesidan -->
+        <li><a href="blogg.html">Blogg</a></li> <!-- Länk till bloggsidan -->
+        <li><a href="om-foretaget.html">Om oss</a></li> <!-- Länk till om oss-sidan -->
+        <li><a href="kontakt.html">Kontakt</a></li> <!-- Länk till kontaktsidan -->
       </ul>
     </nav>
   </header>
 
+  <!-- Huvudinnehåll med erbjudanden -->
   <main>
+    <!-- Hero-sektion med uppmaning till handling -->
     <section class="hero-erbjudande">
-      <h2>Missa inte våra fynd!</h2>
-      <p>Begränsade erbjudanden</p>
-      <a href="produkter.html" class="cta-btn">Köpa nu</a>
+      <h2>Missa inte våra fynd!</h2> <!-- Huvudrubrik för erbjudandesektionen -->
+      <p>Begränsade erbjudanden</p> <!-- Beskrivande text -->
+      <a href="produkter.html" class="cta-btn">Köpa nu</a> <!-- Call-to-action knapp som länkar till produktsidan -->
     </section>
 
+    <!-- Rad med erbjudandekort -->
     <div class="erbjudande-rad">
+      <!-- Erbjudande 1: Tröja -->
       <div class="erbjudande-kort">
-        <span class="badge">Discount</span>
-        <img src="images/erbjudande1.png" alt="Tröja" />
-        <p>Pris: 12$</p>
+        <span class="badge">Discount</span> <!-- Rabattmärke som visar att produkten är på rea -->
+        <img src="images/erbjudande1.png" alt="Tröja" /> <!-- Produktbild -->
+        <p>Pris: 12$</p> <!-- Produktpris -->
       </div>
+      <!-- Erbjudande 2: Randig tröja -->
       <div class="erbjudande-kort">
-        <span class="badge">Discount</span>
-        <img src="images/erbjudande2.png" alt="Randig tröja" />
-        <p>Pris: 30$</p>
+        <span class="badge">Discount</span> <!-- Rabattmärke som visar att produkten är på rea -->
+        <img src="images/erbjudande2.png" alt="Randig tröja" /> <!-- Produktbild -->
+        <p>Pris: 30$</p> <!-- Produktpris -->
       </div>
+      <!-- Erbjudande 3: Grön skjorta -->
       <div class="erbjudande-kort">
-        <span class="badge">Discount</span>
-        <img src="images/erbjudande3.png" alt="Grön skjorta" />
-        <p>Pris: 12$</p>
+        <span class="badge">Discount</span> <!-- Rabattmärke som visar att produkten är på rea -->
+        <img src="images/erbjudande3.png" alt="Grön skjorta" /> <!-- Produktbild -->
+        <p>Pris: 12$</p> <!-- Produktpris -->
       </div>
     </div>
   </main>
 
+  <!-- Sidfot med copyright-information -->
   <footer>
-    <p>&copy; 2025 Grön Garderob – Din Modebutik</p>
+    <p>&copy; 2025 Grön Garderob – Din Modebutik</p> <!-- Copyright-text -->
   </footer>
 </body>
 </html>

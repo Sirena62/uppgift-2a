@@ -1,68 +1,86 @@
 <!DOCTYPE html>
+<!--
+  Produktsida för Grön Garderob
+
+  Denna sida visar alla produkter som butiken erbjuder
+  och innehåller en sökfunktion för att filtrera produkterna.
+-->
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Produkter – Grön Garderob</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/produkt-sok.js"></script>
+  <meta charset="UTF-8" /> <!-- Teckenkodning för att hantera svenska tecken -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsiv design för mobila enheter -->
+  <title>Produkter – Grön Garderob</title> <!-- Sidtitel som visas i webbläsarfliken -->
+  <link rel="stylesheet" href="css/style.css" /> <!-- Länk till CSS-stilmallen -->
+  <script defer src="js/produkt-sok.js"></script> <!-- JavaScript för produktsökning, defer gör att scriptet laddas efter HTML -->
 </head>
 <body>
+  <!-- Sidhuvud med logotyp och navigation -->
   <header>
-    <h1>Grön Garderob</h1>
+    <h1>Grön Garderob</h1> <!-- Huvudrubrik med företagsnamn -->
+    <!-- Navigationsmeny -->
     <nav>
       <ul>
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="produkter.html" class="active">Produkter</a></li>
-        <li><a href="erbjudanden.html">Erbjudanden</a></li>
-        <li><a href="blogg.html">Blogg</a></li>
-        <li><a href="om-foretaget.html">Om oss</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="index.html">Hem</a></li> <!-- Länk till startsidan -->
+        <li><a href="produkter.html" class="active">Produkter</a></li> <!-- Aktiv länk till produktsidan -->
+        <li><a href="erbjudanden.html">Erbjudanden</a></li> <!-- Länk till erbjudandesidan -->
+        <li><a href="blogg.html">Blogg</a></li> <!-- Länk till bloggsidan -->
+        <li><a href="om-foretaget.html">Om oss</a></li> <!-- Länk till om oss-sidan -->
+        <li><a href="kontakt.html">Kontakt</a></li> <!-- Länk till kontaktsidan -->
       </ul>
-    </nav>    
+    </nav>
   </header>
 
+  <!-- Huvudinnehåll med produkter och sökfunktion -->
   <main>
-    <h2>Våra Produkter</h2>
+    <h2>Våra Produkter</h2> <!-- Rubrik för produktsektionen -->
 
+    <!-- Sökfält för produktfiltrering, kopplat till JavaScript-funktionalitet -->
     <input type="text" id="searchBar" placeholder="Sök produkter..." />
 
+    <!-- Produktrutnät med alla produkter -->
     <div id="produktlista" class="produkt-grid">
+      <!-- Produkt: Stickad grön tröja -->
       <div class="produkt">
-        <img src="images/troja-stickad.png" alt="Stickad tröja" />
-        <h3>Stickad grön tröja</h3>
-        <p>Pris: 15$</p>
+        <img src="images/troja-stickad.png" alt="Stickad tröja" /> <!-- Produktbild -->
+        <h3>Stickad grön tröja</h3> <!-- Produktnamn -->
+        <p>Pris: 15$</p> <!-- Produktpris -->
       </div>
+      <!-- Produkt: Jeanskjol -->
       <div class="produkt">
-        <img src="images/kjol-jeans.png" alt="Jeanskjol" />
-        <h3>Jeanskjol</h3>
-        <p>Pris: 10$</p>
+        <img src="images/kjol-jeans.png" alt="Jeanskjol" /> <!-- Produktbild -->
+        <h3>Jeanskjol</h3> <!-- Produktnamn -->
+        <p>Pris: 10$</p> <!-- Produktpris -->
       </div>
+      <!-- Produkt: Blommig topp -->
       <div class="produkt">
-        <img src="images/topp-blommig.png" alt="Blommig topp" />
-        <h3>Blommig topp</h3>
-        <p>Pris: 10$</p>
+        <img src="images/topp-blommig.png" alt="Blommig topp" /> <!-- Produktbild -->
+        <h3>Blommig topp</h3> <!-- Produktnamn -->
+        <p>Pris: 10$</p> <!-- Produktpris -->
       </div>
+      <!-- Produkt: Gröna shorts -->
       <div class="produkt">
-        <img src="images/shorts-grona.png" alt="Gröna shorts" />
-        <h3>Gröna shorts</h3>
-        <p>Pris: 13$</p>
+        <img src="images/shorts-grona.png" alt="Gröna shorts" /> <!-- Produktbild -->
+        <h3>Gröna shorts</h3> <!-- Produktnamn -->
+        <p>Pris: 13$</p> <!-- Produktpris -->
       </div>
+      <!-- Produkt: Blommig klänning -->
       <div class="produkt">
-        <img src="images/klanning-blommig.png" alt="Blommig klänning" />
-        <h3>Blommig klänning</h3>
-        <p>Pris: 17$</p>
+        <img src="images/klanning-blommig.png" alt="Blommig klänning" /> <!-- Produktbild -->
+        <h3>Blommig klänning</h3> <!-- Produktnamn -->
+        <p>Pris: 17$</p> <!-- Produktpris -->
       </div>
+      <!-- Produkt: Ljusblå jeans -->
       <div class="produkt">
-        <img src="images/jeans-ljusbla.png" alt="Ljusblå jeans" />
-        <h3>Ljusblå jeans</h3>
-        <p>Pris: 19$</p>
+        <img src="images/jeans-ljusbla.png" alt="Ljusblå jeans" /> <!-- Produktbild -->
+        <h3>Ljusblå jeans</h3> <!-- Produktnamn -->
+        <p>Pris: 19$</p> <!-- Produktpris -->
       </div>
     </div>
   </main>
 
+  <!-- Sidfot med copyright-information -->
   <footer>
-    <p>&copy; 2025 Grön Garderob – Din Modebutik</p>
+    <p>&copy; 2025 Grön Garderob – Din Modebutik</p> <!-- Copyright-text -->
   </footer>
 </body>
 </html>

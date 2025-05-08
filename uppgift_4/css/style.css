@@ -1,4 +1,15 @@
-/* Grundläggande stil */
+/**
+ * Huvudstilmall för Grön Garderob webbplats
+ *
+ * Denna CSS-fil innehåller alla stilar för webbplatsen, inklusive:
+ * - Grundläggande layoutstilar
+ * - Navigering och sidhuvud/sidfot
+ * - Produktvisning och sökfunktionalitet
+ * - Responsiv design för olika skärmstorlekar
+ * - Specialstilar för olika sidor (blogg, kontakt, erbjudanden, etc.)
+ */
+
+/* Grundläggande stil för hela sidan */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -54,7 +65,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsivitet */
+/* ===== Responsiv design för mobila enheter ===== */
 @media (max-width: 600px) {
   nav ul {
       flex-direction: column;
@@ -62,6 +73,9 @@ footer {
   }
 }
 
+/* ===== Produktsida och sökfunktionalitet ===== */
+
+/* Sökfält för produktfiltrering */
 input#searchBar {
   width: 100%;
   max-width: 400px;
@@ -70,12 +84,14 @@ input#searchBar {
   font-size: 16px;
 }
 
+/* Responsivt rutnät för produktvisning */
 .produkt-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Anpassar kolumner efter skärmstorlek */
   gap: 20px;
 }
 
+/* Individuella produktkort */
 .produkt {
   background-color: #ffffff;
   padding: 15px;
@@ -83,30 +99,40 @@ input#searchBar {
   border-radius: 6px;
 }
 
+/* ===== Bloggsida ===== */
+
+/* Stilar för blogginlägg */
 .bloggpost {
   background-color: #ffffff;
   padding: 20px;
   margin-bottom: 20px;
-  border-left: 6px solid #7ca982;
+  border-left: 6px solid #7ca982; /* Grön accentfärg på vänster sida */
   border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Subtil skugga för djupeffekt */
 }
 
+/* ===== Om företaget-sida ===== */
+
+/* Rutnät för informationssektioner */
 .om-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivt rutnät */
   margin-top: 20px;
 }
 
+/* Individuella informationssektioner */
 .om-grid section {
   background-color: #ffffff;
   padding: 15px;
-  border-left: 5px solid #7ca982;
+  border-left: 5px solid #7ca982; /* Grön accentfärg på vänster sida */
   border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtil skugga */
 }
 
+/* ===== Kontaktsida ===== */
+
+/* Kontaktformulär */
 .kontaktform {
   display: flex;
   flex-direction: column;
@@ -115,6 +141,7 @@ input#searchBar {
   gap: 15px;
 }
 
+/* Formulärinmatningsfält */
 .kontaktform input,
 .kontaktform textarea {
   padding: 10px;
@@ -123,8 +150,9 @@ input#searchBar {
   border-radius: 5px;
 }
 
+/* Skicka-knapp */
 .kontaktform button {
-  background-color: #7ca982;
+  background-color: #7ca982; /* Grön knapp som matchar webbplatsens tema */
   color: white;
   padding: 10px;
   border: none;
@@ -133,79 +161,91 @@ input#searchBar {
   font-size: 16px;
 }
 
+/* Kontaktinformation */
 .kontakt-info {
   margin-top: 30px;
   font-size: 16px;
   line-height: 1.6;
 }
 
+/* Länkar i kontaktinformationen */
 .kontakt-info a {
   color: #2f4f2f;
   text-decoration: none;
   font-weight: bold;
 }
 
+/* Hover-effekt för länkar */
 .kontakt-info a:hover {
   text-decoration: underline;
 }
 
+/* Kartsektion */
 .karta {
   margin: 40px auto;
   max-width: 600px;
 }
 
+/* ===== Erbjudandesida ===== */
+
+/* Rutnät för erbjudanden */
 .erbjudande-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsivt rutnät */
   margin-top: 20px;
 }
 
+/* Kort för individuella erbjudanden */
 .erbjudande-kort {
   position: relative; /* För .badge-positionering */
   background-color: #ffffff;
-  border: 2px solid #a3c9a8;
+  border: 2px solid #a3c9a8; /* Grön kantlinje */
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtil skugga */
 }
 
+/* Rubrik i erbjudandekort */
 .erbjudande-kort h3 {
   margin-top: 0;
 }
 
+/* Genomstruken text för ursprungligt pris */
 .erbjudande-kort del {
-  color: #888;
+  color: #888; /* Grå färg för att visa att det är det gamla priset */
 }
 
+/* Framhävt pris med rabatt */
 .erbjudande-kort strong {
   color: #2f4f2f;
   font-size: 18px;
 }
 
+/* Köpknapp i erbjudandekort */
 .erbjudande-kort button {
   margin-top: 10px;
   padding: 8px 15px;
-  background-color: #7ca982;
+  background-color: #7ca982; /* Grön knapp som matchar webbplatsens tema */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-/* Rabattmärke: röd cirkel uppe till höger */
+/* Rabattmärke: röd cirkel uppe till höger på erbjudandekort */
 .badge {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: crimson;
+  background-color: crimson; /* Röd färg för att dra uppmärksamhet */
   color: white;
   padding: 6px 10px;
   font-size: 12px;
-  border-radius: 50%;
+  border-radius: 50%; /* Cirkelform */
   font-weight: bold;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 3px rgba(0,0,0,0.2); /* Subtil skugga */
   text-align: center;
   width: 60px;
   height: 60px;
@@ -214,38 +254,44 @@ input#searchBar {
   justify-content: center;
 }
 
-/* Startsida layout - från index.html */
+/* ===== Startsida layout ===== */
+
+/* Välkomstbanner */
 .welcome {
   font-size: 28px;
   margin: 10px auto;
   padding: 10px;
   text-align: center;
   font-weight: bold;
-  border: 2px solid #2f4f2f;
+  border: 2px solid #2f4f2f; /* Mörkgrön ram */
   width: fit-content;
 }
 
+/* Huvudrutnät för navigeringskort */
 .main-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsivt rutnät */
   gap: 20px;
   margin: 30px;
   text-align: center;
 }
 
+/* Individuella navigeringskort */
 .grid-item {
-  background-color: #f8f5f0;
-  border: 2px solid #c8bfae;
+  background-color: #f8f5f0; /* Ljus bakgrund */
+  border: 2px solid #c8bfae; /* Beige kantlinje */
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtil skugga */
 }
 
+/* Bilder i navigeringskort */
 .grid-item img {
   max-width: 100%;
-  height: auto;
+  height: auto; /* Behåll bildproportioner */
 }
 
+/* Rubriker i navigeringskort */
 .grid-item h3 {
   font-size: 18px;
   margin-top: 10px;

@@ -1,233 +1,273 @@
 <!DOCTYPE html>
+<!--
+  Huvudstartsida för webbplatsen
+
+  Denna sida fungerar som en portal till de olika uppgifterna
+  med en scrapbook-inspirerad design och navigeringsknappar.
+-->
 <html lang="sv">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Min Scrapbook Startsida</title>
+        <meta charset="UTF-8"> <!-- Teckenkodning för att hantera svenska tecken -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsiv design för mobila enheter -->
+        <title>Min Scrapbook Startsida</title> <!-- Sidtitel som visas i webbläsarfliken -->
+        <!-- Inbäddad CSS för scrapbook-designen -->
         <style>
+            /* CSS-variabler för färgschema och designelement */
             :root {
-                --primary-color: #FF9E9E;
-                --secondary-color: #A0E7E5;
-                --accent-color: #B5EAEA;
-                --paper-color: #FFF5EB;
-                --tape-color: rgba(255, 255, 255, 0.4);
-                --ink-color: #3A3845;
-                --shadow-color: rgba(0, 0, 0, 0.2);
+                --primary-color: #FF9E9E;    /* Rosa färg för primära element */
+                --secondary-color: #A0E7E5;  /* Ljusblå färg för sekundära element */
+                --accent-color: #B5EAEA;     /* Blågrön accentfärg */
+                --paper-color: #FFF5EB;      /* Beige pappersfärg för bakgrund */
+                --tape-color: rgba(255, 255, 255, 0.4); /* Genomskinlig vit för tejpeffekt */
+                --ink-color: #3A3845;        /* Mörkgrå för text */
+                --shadow-color: rgba(0, 0, 0, 0.2); /* Genomskinlig svart för skuggor */
             }
-    
+
+            /* Grundläggande återställning av CSS för alla element */
             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
-                font-family: 'Comic Neue', cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: 'Comic Neue', cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Handskriven stil för scrapbook-känsla */
             }
-    
+
+            /* Bakgrund och layout för hela sidan */
             body {
-                background-color: #FDF7E4;
-                background-image: 
+                background-color: #FDF7E4; /* Ljus bakgrundsfärg */
+                /* Komplext mönster för att skapa en papperstextur med hjälp av flera linjära gradienter */
+                background-image:
                     linear-gradient(45deg, var(--paper-color) 25%, transparent 25%),
                     linear-gradient(-45deg, var(--paper-color) 25%, transparent 25%),
                     linear-gradient(45deg, transparent 75%, var(--paper-color) 75%),
                     linear-gradient(-45deg, transparent 75%, var(--paper-color) 75%);
-                background-size: 20px 20px;
-                background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-                min-height: 100vh;
-                display: flex;
+                background-size: 20px 20px; /* Storlek på mönstret */
+                background-position: 0 0, 0 10px, 10px -10px, -10px 0px; /* Position för de olika gradienterna */
+                min-height: 100vh; /* Full höjd av viewport */
+                display: flex; /* Flexbox för centrering */
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding: 2rem;
-                color: var(--ink-color);
+                align-items: center; /* Centrerar horisontellt */
+                justify-content: center; /* Centrerar vertikalt */
+                padding: 2rem; /* Inre marginal */
+                color: var(--ink-color); /* Textfärg */
             }
-    
+
+            /* Huvudcontainer som ser ut som ett pappersark */
             .container {
-                position: relative;
+                position: relative; /* För positionering av pseudo-element (tejp) */
                 width: 100%;
-                max-width: 800px;
-                background: var(--paper-color);
-                padding: 3rem 2rem;
-                border-radius: 5px;
-                box-shadow: 0 10px 30px var(--shadow-color);
-                border: 1px solid #E8D5C4;
-                transform: rotate(-0.5deg);
+                max-width: 800px; /* Begränsar bredden */
+                background: var(--paper-color); /* Pappersfärgad bakgrund */
+                padding: 3rem 2rem; /* Inre marginal */
+                border-radius: 5px; /* Rundade hörn */
+                box-shadow: 0 10px 30px var(--shadow-color); /* Skugga för 3D-effekt */
+                border: 1px solid #E8D5C4; /* Tunn kant */
+                transform: rotate(-0.5deg); /* Lätt rotation för scrapbook-känsla */
             }
-    
-            /* Scrapbook tape effect */
+
+            /* Tejpeffekt för att fästa papperet på bakgrunden */
             .container::before, .container::after {
-                content: '';
+                content: ''; /* Nödvändigt för att visa pseudo-element */
                 position: absolute;
-                height: 30px;
-                background: var(--tape-color);
-                border: 1px dashed var(--shadow-color);
-                width: 120px;
-                transform: rotate(-3deg);
+                height: 30px; /* Höjd på tejpbitarna */
+                background: var(--tape-color); /* Genomskinlig vit färg för tejp */
+                border: 1px dashed var(--shadow-color); /* Streckad kant för realistisk tejpeffekt */
+                width: 120px; /* Bredd på tejpbitarna */
+                transform: rotate(-3deg); /* Lätt rotation för naturlig känsla */
             }
-    
+
+            /* Placering av övre tejpbit */
             .container::before {
-                top: -15px;
-                left: 30%;
+                top: -15px; /* Placering ovanför containern */
+                left: 30%; /* Horisontell placering */
             }
-    
+
+            /* Placering av nedre tejpbit */
             .container::after {
-                bottom: -15px;
-                right: 30%;
+                bottom: -15px; /* Placering under containern */
+                right: 30%; /* Horisontell placering */
             }
-    
+
+            /* Stilar för huvudrubriken */
             h1 {
-                color: var(--ink-color);
-                margin-bottom: 2.5rem;
-                font-size: 2.5rem;
-                text-align: center;
-                position: relative;
-                display: inline-block;
-                left: 50%;
-                transform: translateX(-50%);
-                text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+                color: var(--ink-color); /* Textfärg */
+                margin-bottom: 2.5rem; /* Marginal under rubriken */
+                font-size: 2.5rem; /* Textstorlek */
+                text-align: center; /* Centrerad text */
+                position: relative; /* För positionering av understrykningseffekt */
+                display: inline-block; /* För att begränsa bredden till innehållet */
+                left: 50%; /* Centrering med transform */
+                transform: translateX(-50%); /* Centrerar exakt */
+                text-shadow: 2px 2px 0px rgba(0,0,0,0.1); /* Subtil skugga för djupeffekt */
             }
-    
+
+            /* Färgglad understrykning under rubriken */
             h1::after {
-                content: '';
+                content: ''; /* Nödvändigt för att visa pseudo-element */
                 position: absolute;
-                bottom: -10px;
+                bottom: -10px; /* Placering under texten */
                 left: 0;
-                width: 100%;
-                height: 3px;
+                width: 100%; /* Full bredd */
+                height: 3px; /* Höjd på understrykningen */
+                /* Färgglad gradient för understrykningen */
                 background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-                border-radius: 3px;
+                border-radius: 3px; /* Rundade hörn */
             }
-    
+
+            /* Container för navigeringsknappar */
             .button-group {
                 display: flex;
-                flex-direction: column;
-                gap: 1.8rem;
+                flex-direction: column; /* Staplar knapparna vertikalt */
+                gap: 1.8rem; /* Mellanrum mellan knapparna */
                 width: 100%;
-                max-width: 400px;
-                margin: 0 auto;
+                max-width: 400px; /* Begränsar bredden */
+                margin: 0 auto; /* Centrerar horisontellt */
             }
-    
+
+            /* Grundläggande knappstil */
             .btn {
-                position: relative;
+                position: relative; /* För positionering av glanseffekt */
                 background-color: white;
-                color: var(--ink-color);
+                color: var(--ink-color); /* Textfärg */
                 border: none;
-                padding: 1.2rem 2rem;
-                font-size: 1.1rem;
-                border-radius: 50px;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                box-shadow: 4px 4px 0 var(--shadow-color);
-                font-weight: 600;
-                text-decoration: none;
+                padding: 1.2rem 2rem; /* Inre marginal */
+                font-size: 1.1rem; /* Textstorlek */
+                border-radius: 50px; /* Rundade hörn */
+                cursor: pointer; /* Visar handmarkör vid hover */
+                transition: all 0.3s ease; /* Mjuk övergång för hover-effekter */
+                box-shadow: 4px 4px 0 var(--shadow-color); /* 3D-skuggeffekt */
+                font-weight: 600; /* Fetare text */
+                text-decoration: none; /* Tar bort understrykning från länkar */
                 display: inline-block;
                 width: 100%;
                 text-align: center;
-                border: 2px solid var(--ink-color);
-                overflow: hidden;
+                border: 2px solid var(--ink-color); /* Svart kant */
+                overflow: hidden; /* Döljer glanseffekten när den går utanför knappen */
             }
-    
+
+            /* Hover-effekt för knappar */
             .btn:hover {
-                transform: translateY(-5px) rotate(1deg);
-                box-shadow: 6px 6px 0 var(--shadow-color);
+                transform: translateY(-5px) rotate(1deg); /* Lyfter knappen och roterar lätt */
+                box-shadow: 6px 6px 0 var(--shadow-color); /* Större skugga för 3D-effekt */
             }
-    
+
+            /* Glanseffekt som sveper över knappen */
             .btn::before {
                 content: '';
                 position: absolute;
                 top: 0;
-                left: -100%;
+                left: -100%; /* Börjar utanför knappen */
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-                transition: 0.5s;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); /* Genomskinlig vit glans */
+                transition: 0.5s; /* Animationshastighet */
             }
-    
+
+            /* Animation av glanseffekt vid hover */
             .btn:hover::before {
-                left: 100%;
+                left: 100%; /* Flyttar glansen över knappen */
             }
-    
+
+            /* Rosa knapp för primära länkar */
             .btn-primary {
                 background-color: var(--primary-color);
             }
-    
+
+            /* Blå knapp för sekundära länkar */
             .btn-secondary {
                 background-color: var(--secondary-color);
             }
-    
+
+            /* Blågrön knapp för accentlänkar */
             .btn-accent {
                 background-color: var(--accent-color);
             }
-    
-            /* Sticker-like elements */
+
+            /* Klistermärkesliknande element för dekoration */
             .sticker {
                 position: absolute;
                 font-size: 1rem;
                 padding: 0.5rem 1rem;
-                border-radius: 50px;
-                transform: rotate(-10deg);
-                box-shadow: 3px 3px 5px var(--shadow-color);
-                z-index: 10;
+                border-radius: 50px; /* Rundade hörn */
+                transform: rotate(-10deg); /* Rotation för naturlig känsla */
+                box-shadow: 3px 3px 5px var(--shadow-color); /* Skugga för 3D-effekt */
+                z-index: 10; /* Placerar ovanpå andra element */
             }
-    
+
+            /* Gul klistermärke i övre vänstra hörnet */
             .sticker-1 {
                 top: -20px;
                 left: -20px;
-                background: #FFD166;
+                background: #FFD166; /* Gul färg */
                 transform: rotate(-15deg);
             }
-    
+
+            /* Grön klistermärke i nedre högra hörnet */
             .sticker-2 {
                 bottom: -15px;
                 right: -15px;
-                background: #06D6A0;
+                background: #06D6A0; /* Grön färg */
                 transform: rotate(10deg);
             }
-    
+
+            /* Responsiva stilar för mindre skärmar */
             @media (max-width: 600px) {
+                /* Mindre rubrik på små skärmar */
                 h1 {
                     font-size: 2rem;
                 }
-                
+
+                /* Mindre knappar på små skärmar */
                 .btn {
                     padding: 1rem 1.5rem;
                 }
-    
+
+                /* Mindre padding i containern på små skärmar */
                 .container {
                     padding: 2rem 1.5rem;
                 }
             }
-    
-            /* Hand-drawn elements */
+
+            /* Handritade dekorativa element */
             .doodle {
                 position: absolute;
                 width: 50px;
                 height: 50px;
-                opacity: 0.7;
-                z-index: -1;
+                opacity: 0.7; /* Delvis genomskinlig */
+                z-index: -1; /* Placeras bakom andra element */
             }
-    
+
+            /* Rosa prickmönster i övre vänstra delen av sidan */
             .doodle-1 {
                 top: 10%;
                 left: 5%;
-                background: radial-gradient(circle, var(--primary-color) 20%, transparent 20%);
+                background: radial-gradient(circle, var(--primary-color) 20%, transparent 20%); /* Prickmönster */
                 transform: rotate(45deg);
             }
-    
+
+            /* Streckad cirkel i nedre högra delen av sidan */
             .doodle-2 {
                 bottom: 10%;
                 right: 5%;
-                border: 3px dashed var(--secondary-color);
-                border-radius: 50%;
+                border: 3px dashed var(--secondary-color); /* Streckad kant */
+                border-radius: 50%; /* Cirkelform */
             }
         </style>
     </head>
 <body>
+    <!-- Huvudcontainer med scrapbook-design -->
     <div class="container">
-        <h1>Esraa Issa - Välkommen till Min Webbplats</h1> 
-        
+        <!-- Huvudrubrik med välkomstmeddelande -->
+        <h1>Esraa Issa - Välkommen till Min Webbplats</h1>
+
+        <!-- Navigeringsknappar till de olika uppgifterna -->
         <div class="button-group">
+            <!-- Länk till uppgift 2 med primär knappstil -->
             <a href="./uppgift_2/index.html" class="btn btn-primary">Uppgift 2 - Startsida</a>
+            <!-- Länk till uppgift 3 (LTU-sida) med sekundär knappstil -->
             <a href="./uppgift_3/ltu.html" class="btn btn-secondary">Uppgift 3 - LTU-sida</a>
+            <!-- Länk till uppgift 3 (formulär) med accent knappstil -->
             <a href="./uppgift_3/form.html" class="btn btn-accent">Uppgift 3 - Formulär</a>
+            <!-- Länk till uppgift 4 med accent knappstil -->
             <a href="./uppgift_4/index.html" class="btn btn-accent">Uppgift 4 - Hemsida</a>
         </div>
     </div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Grön Garderob</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Grön Garderob</h1>
+    <nav>
+        <ul>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="produkter.html">Produkter</a></li>
+          <li><a href="erbjudanden.html">Erbjudanden</a></li>
+          <li><a href="blogg.html">Blogg</a></li>
+          <li><a href="om-foretaget.html">Om oss</a></li>
+          <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <h2>Kontakta oss</h2>
+
+    <form class="kontaktform">
+      <label for="namn">Namn:</label>
+      <input type="text" id="namn" name="namn" required />
+
+      <label for="epost">E-post:</label>
+      <input type="email" id="epost" name="epost" required />
+
+      <label for="meddelande">Meddelande:</label>
+      <textarea id="meddelande" name="meddelande" rows="5" required></textarea>
+
+      <button type="submit">Skicka</button>
+    </form>
+
+    <section class="kontakt-info">
+        <p>📧 Vårt mejl: <a href="mailto:DinModeButik@gmail.com">DinModeButik@gmail.com</a></p>
+        <p>📞 Vår telefon: 05000001</p>
+      </section>
+
+      
+    <div class="karta">
+      <h3>Hitta till oss</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2164.914106630362!2d18.0632402!3d59.3345914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d588b3f7d13%3A0xc4c83eeb4aa755d1!2sStockholm%20City!5e0!3m2!1ssv!2sse!4v1715000000000!5m2!1ssv!2sse"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Grön Garderob – Din Modebutik</p>
+  </footer>
+</body>
+</html>

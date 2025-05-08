@@ -1,0 +1,252 @@
+/* Grundläggande stil */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f2ee;
+  color: #333;
+}
+
+header {
+  background-color: #dbe6d5;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2f4f2f;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #0f1f0f;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.hero {
+  background-color: #e9f5e1;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #dbe6d5;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* Responsivitet */
+@media (max-width: 600px) {
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+input#searchBar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.produkt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.produkt {
+  background-color: #ffffff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.bloggpost {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 6px solid #7ca982;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.om-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 20px;
+}
+
+.om-grid section {
+  background-color: #ffffff;
+  padding: 15px;
+  border-left: 5px solid #7ca982;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.kontaktform {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 20px auto;
+  gap: 15px;
+}
+
+.kontaktform input,
+.kontaktform textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.kontaktform button {
+  background-color: #7ca982;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.kontakt-info {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.kontakt-info a {
+  color: #2f4f2f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.kontakt-info a:hover {
+  text-decoration: underline;
+}
+
+.karta {
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.erbjudande-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 20px;
+}
+
+.erbjudande-kort {
+  position: relative; /* För .badge-positionering */
+  background-color: #ffffff;
+  border: 2px solid #a3c9a8;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.erbjudande-kort h3 {
+  margin-top: 0;
+}
+
+.erbjudande-kort del {
+  color: #888;
+}
+
+.erbjudande-kort strong {
+  color: #2f4f2f;
+  font-size: 18px;
+}
+
+.erbjudande-kort button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #7ca982;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Rabattmärke: röd cirkel uppe till höger */
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: crimson;
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Startsida layout - från index.html */
+.welcome {
+  font-size: 28px;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #2f4f2f;
+  width: fit-content;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 30px;
+  text-align: center;
+}
+
+.grid-item {
+  background-color: #f8f5f0;
+  border: 2px solid #c8bfae;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid-item h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
